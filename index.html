@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PROGEKEES — Seu mundo gamer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="#" class="logo">
+      <span>PRO</span>GEKEES
+    </a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#loja">Loja</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <div class="header-acoes">
+
+      <button class="icone-btn" id="buscarBtn">
+        🔎
+      </button>
+
+      <button class="icone-btn" id="cartBtn">
+        🛒
+        <span id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-texto">
+
+        <div class="pill">
+          ⚡ NOVA COLEÇÃO DISPONÍVEL
+        </div>
+
+        <h1>
+          SEU SETUP.
+          <br>
+          <span>SEU ESTILO.</span>
+        </h1>
+
+        <p>
+          Posters, quadros e acessórios criados para quem
+          não trata o mundo gamer como apenas um hobby.
+        </p>
+
+        <div class="hero-botoes">
+
+          <a href="#loja" class="btn principal">
+            Explorar loja
+            <span>→</span>
+          </a>
+
+          <a href="#ofertas" class="btn secundario">
+            Ver ofertas
+          </a>
+
+        </div>
+
+        <div class="hero-info">
+
+          <div>
+            <strong>+500</strong>
+            <small>produtos vendidos</small>
+          </div>
+
+          <div>
+            <strong>4.9 ⭐</strong>
+            <small>avaliação média</small>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <small>feito para gamers</small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="circulo"></div>
+
+        <div class="produto-flutuante">
+
+          <img
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85"
+            alt="Setup gamer"
+          >
+
+          <div class="produto-tag">
+            <span>🔥</span>
+            MAIS VENDIDO
+          </div>
+
+        </div>
+
+        <div class="floating-card">
+          🎮
+          <div>
+            <strong>Gamer Collection</strong>
+            <small>Nova coleção</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+    <section class="categorias">
+
+      <div class="titulo">
+        <span>EXPLORE</span>
+        <h2>Escolha seu estilo</h2>
+      </div>
+
+      <div class="categorias-grid">
+
+        <button class="categoria-card" data-categoria="poster">
+
+          <img
+            src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=700&q=80"
+            alt="Posters"
+          >
+
+          <div>
+            <small>01</small>
+            <h3>Posters</h3>
+            <span>Ver coleção →</span>
+          </div>
+
+        </button>
+
+
+        <button class="categoria-card" data-categoria="quadro">
+
+          <img
+            src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=700&q=80"
+            alt="Quadros"
+          >
+
+          <div>
+            <small>02</small>
+            <h3>Quadros</h3>
+            <span>Ver coleção →</span>
+          </div>
+
+        </button>
+
+
+        <button class="categoria-card" data-categoria="acessorio">
+
+          <img
+            src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=700&q=80"
+            alt="Acessórios"
+          >
+
+          <div>
+            <small>03</small>
+            <h3>Acessórios</h3>
+            <span>Ver coleção →</span>
+          </div>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOJA -->
+    <section class="loja" id="loja">
+
+      <div class="loja-topo">
+
+        <div>
+          <span>PROGEKEES STORE</span>
+          <h2>Produtos em destaque</h2>
+        </div>
+
+        <div class="filtros">
+
+          <button class="filtro ativo" data-filter="todos">
+            Todos
+          </button>
+
+          <button class="filtro" data-filter="poster">
+            Posters
+          </button>
+
+          <button class="filtro" data-filter="quadro">
+            Quadros
+          </button>
+
+          <button class="filtro" data-filter="acessorio">
+            Acessórios
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="produtos" id="produtos"></div>
+
+    </section>
+
+
+    <!-- OFERTA -->
+    <section class="oferta" id="ofertas">
+
+      <div class="oferta-texto">
+
+        <span>🔥 OFERTA LIMITADA</span>
+
+        <h2>
+          Monte seu setup
+          <strong>com desconto.</strong>
+        </h2>
+
+        <p>
+          Aproveite nossa seleção especial e economize
+          enquanto os produtos ainda estão disponíveis.
+        </p>
+
+        <button class="btn principal" id="ofertaBtn">
+          Aproveitar oferta →
+        </button>
+
+      </div>
+
+      <div class="oferta-imagem">
+
+        <img
+          src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85"
+          alt="Setup gamer"
+        >
+
+        <div class="desconto">
+          ATÉ
+          <strong>30%</strong>
+          OFF
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+
+      <div class="sobre-numero">
+        2026
+      </div>
+
+      <div>
+
+        <span>QUEM SOMOS</span>
+
+        <h2>
+          Não vendemos decoração.
+          <strong>Vendemos identidade.</strong>
+        </h2>
+
+        <p>
+          A Progekees nasceu para quem passa horas no setup,
+          joga com os amigos e quer que o próprio espaço tenha
+          a mesma personalidade que existe dentro do jogo.
+        </p>
+
+        <p>
+          Cada produto é pensado para transformar seu ambiente
+          em um lugar que realmente tenha a sua cara.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+      <div>
+        <span>FIQUE POR DENTRO</span>
+
+        <h2>
+          Entre para a Progekees.
+        </h2>
+
+        <p>
+          Receba lançamentos e ofertas antes de todo mundo.
+        </p>
+      </div>
+
+      <form id="newsletter">
+
+        <input
+          type="email"
+          placeholder="Seu melhor e-mail"
+          required
+        >
+
+        <button>
+          Entrar →
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      <span>PRO</span>GEKEES
+    </div>
+
+    <p>
+      Seu mundo gamer começa aqui.
+    </p>
+
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Discord</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <small>
+      © 2026 Progekees. Todos os direitos reservados.
+    </small>
+
+  </footer>
+
+
+  <!-- CARRINHO -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="carrinho" id="carrinho">
+
+    <div class="carrinho-header">
+
+      <div>
+        <span>PROGEKEES</span>
+        <h2>Seu carrinho</h2>
+      </div>
+
+      <button id="closeCart">×</button>
+
+    </div>
+
+
+    <div class="carrinho-itens" id="cartItems"></div>
+
+
+    <div class="carrinho-vazio" id="emptyCart">
+
+      <div>🛒</div>
+
+      <h3>Seu carrinho está vazio</h3>
+
+      <p>
+        Adicione algum produto para começar.
+      </p>
+
+    </div>
+
+
+    <div class="carrinho-bottom">
+
+      <div class="total">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+      <button id="checkout">
+        Finalizar pedido →
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
